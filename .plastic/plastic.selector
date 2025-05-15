@@ -1,0 +1,3 @@
+repository "CI546-Group-Project@local"
+  path "/"
+    smartbranch "/main"

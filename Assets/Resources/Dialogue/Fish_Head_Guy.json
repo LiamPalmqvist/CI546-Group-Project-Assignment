@@ -1,0 +1,72 @@
+{
+  "Dialogue": {
+    "d_0_0": {
+      "nextType" : "d",
+      "next": "d_0_1",
+      "line": "Hey! You there! You gotta help me!"
+    },
+    "d_0_1": {
+      "nextType" : "d",
+      "next": "d_0_2",
+      "line": "I was building my sandcastle the other day and I took my lucky pearl with me when I went to go get more sand and now I can't find it anywhere... I CAN'T LIVE WITHOUT IT!!!"
+    },
+    "d_0_2": {
+      "nextType" : "r",
+      "next": "r_0_1",
+      "line": "I won't let ANYONE leave the beach until it's found!"
+    },
+    "d_0_3": {
+      "nextType" : "r",
+      "next": "r_0_2",
+      "line": "Uhhhhh, no..."
+    },
+    "d_0_4": {
+      "nextType" : "d",
+      "next": "d_0_5",
+      "line": "Oh..."
+    },
+    "d_0_5": {
+      "nextType" : "r",
+      "next": "r_0_3",
+      "line": "Do you mind just getting it for me? I'll let you go in the forest. Plus it's too awkward if I just go to Lost and Found now, I screamed at everyone for hours..."
+    }
+  },
+  "Response": {
+    "r_0_0": {
+      "choices": [
+        {
+          "nextType" : "d",
+          "next": "d_0_1",
+          "line": "What's up?"
+        }
+      ]
+    },
+    "r_0_1": {
+      "choices": [
+        {
+          "nextType" : "d",
+          "next": "d_0_3",
+          "line": "Well did you try Lost and Found?"
+        }
+      ]
+    },
+    "r_0_2": {
+      "choices": [
+          {
+            "nextType" : "d",
+            "next": "d_0_4",
+            "line": "It's probably there."
+          }
+      ]
+    },
+    "r_0_3": {
+      "choices": [
+        {
+          "nextType" : "e",
+          "next": "exit",
+          "line": "Yeah sure..."
+        }
+      ]
+    }
+  }
+}

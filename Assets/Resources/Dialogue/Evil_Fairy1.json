@@ -1,0 +1,40 @@
+{
+  "Dialogue": {
+    "d_0_0": {
+      "nextType" : "d",
+      "next": "d_0_1",
+      "line": "STOP RIGHT THERE"
+    },
+    "d_0_1": {
+      "nextType" : "r",
+      "next": "r_0_0",
+      "line": "I've never seen you in these woods before, what are you doing here?"
+    },
+    "d_0_2": {
+      "nextType" : "d",
+      "next": "d_0_3",
+      "line": "Oh... Well I don't really care about that and I'm evil so I'm just gonna majorly inconvenience you!"
+    },
+    "d_0_3": {
+      "nextType" : "d",
+      "next": "d_0_4",
+      "line": "Hyah! Now you'll never make your journey!"
+    },
+    "d_0_4": {
+      "nextType" : "e",
+      "next": "exit",
+      "line": "MWAHAHAHAHAHAHAHAHAHAHA SEE YOU LATER LOSER"
+    }
+  },
+  "Response": {
+    "r_0_0": {
+      "choices": [
+        {
+          "nextType" : "d",
+          "next": "d_0_2",
+          "line": "I'm just trying to get to the other side of the island..."
+        }
+      ]
+    }
+  }
+}

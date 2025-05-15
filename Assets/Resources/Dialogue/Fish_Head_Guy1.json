@@ -1,0 +1,30 @@
+{
+  "Dialogue": {
+    "d_0_0": {
+      "nextType" : "d",
+      "next": "d_0_1",
+      "line": "MY LUCKY PEARL! THANK YOU!"
+    },
+    "d_0_1": {
+      "nextType" : "d",
+      "next": "d_0_2",
+      "line": "I'll let you into the forest now, I should probably go apologise to that lifeguard that I made cry..."
+    },
+    "d_0_2": {
+      "nextType" : "e",
+      "next": "exit",
+      "line": "See you later!"
+    }
+  },
+  "Response": {
+    "r_0_0": {
+      "choices": [
+        {
+          "nextType" : "d",
+          "next": "d_0_1",
+          "line": "Yeah, sure"
+        }
+      ]
+    }
+  }
+}

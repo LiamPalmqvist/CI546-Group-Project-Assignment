@@ -1,0 +1,23 @@
+When the player starts the game, a script attached to the player character becomes active and the player is given control of the player character.
+
+This script utilises a state machine to decide what the player may do at any given point in the game. This state machine has six active states that may be active during the course of the game. The “None” state, the “Diving” state, the “Attacking” state, the “Interacting” state, the “Menu” state and the “Inventory” state.
+
+Another script, “Billboard.cs”, is executed in parallel to this script. This script simply makes the player character always face the camera and works for every entity in the game as well.
+
+During the course of the level, the player may interact with objects and entities. This is done through “sensing” them within a certain radius around the player. This works by using a spherical collider treated as a trigger with no physics applied to detect when entities enter the radius around the player where the player is close enough to interact with the them.
+
+This works on a priority system wherein the entity closest to the player will be given the most significance and will be the only entity the player can interact with. This was made to avoid issues with looping through the list of active entities where the game would crash trying to load content for multiple entities at a time.
+
+When the player interacts with an entity, a check is made to determine if the player is interacting with an NPC or an item on the ground.
+
+If the entity the player is interacting with is an item, several more checks are made. The first is to check if the player already has this item in their inventory. If not, the second check is to see if the player has room in their inventory. If not, a message is displayed to the player to let them know that their inventory is full and that the item cannot be added. If the player’s inventory is not full however, the item is added to a new place in the inventory. If the item already exists in the player’s inventory, the count for the item in the inventory is updated.
+
+After all of these checks, the player’s visual inventory is updated to reflect the changes made. This has already been done once in the duration of this video when the player was first instantiated. This is because when the player starts the game, the program runs a script to generate a global inventory object which persists through scenes and must load the player’s existing inventory at the time that the game was closed.
+
+In the case that the entity that the player was interacting with is instead an NPC, a dialogue loader is run to grab the dialogue for the specific NPC from the local build folder inside the game’s compiled files. This runs a JSON loader which converts a JSON file into a C# object, letting the programmer write a simple JSON file to use with every NPC in the game.
+
+Once the dialogue is loaded, a text bubble appears with the NPC’s first line of dialogue. This is loaded in character by character to simulate the NPC speaking. The player can choose from dialogue options to say back to the NPC which will, in some cases, change the outcome of the conversation.
+
+The aim of most levels is to get a specific item in the player’s inventory, the means for how this is done though differs from stage to stage. This level requires the player to speak to an NPC, grab an item and then speak to the NPC again to progress.
+
+Upon touching a level transition zone, the player’s inventory is checked and a specific item is searched for. If the item does not exist in the player’s inventory, the level transition does not occur, otherwise the player is transported to the next level.

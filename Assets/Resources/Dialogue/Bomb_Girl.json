@@ -1,0 +1,49 @@
+{
+  "Dialogue": {
+    "d_0_0": {
+      "nextType" : "r",
+      "next": "r_0_0",
+      "line": "AHHHHHHHHH!!! HELP ME!!! PLEASE! I’M GONNA DIEEEEEEEEEEEEEEE!"
+    },
+    "d_0_1": {
+      "nextType" : "d",
+      "next": "d_0_2",
+      "line": "I’VE NEVER LIT A BOMB BEFORE. I PANICKED AND THREW THEM."
+    },
+    "d_0_2": {
+      "nextType" : "d",
+      "next": "d_0_3",
+      "line": "THEY’RE MEANT TO OPEN THE EXIT BUT I THREW THEM ACROSS THE ROOM."
+    },
+    "d_0_3": {
+      "nextType" : "r",
+      "next": "r_0_1",
+      "line": "PLEASE HELP ME! I’m gonna die… I’m gonna die in the mines… I’M GONNA DIEEEEEE!"
+    },
+    "d_0_4": {
+      "nextType" : "e",
+      "next": "exit",
+      "line": "I’M GONNA DIE"
+    }
+  },
+  "Response": {
+    "r_0_0": {
+      "choices": [
+        {
+          "nextType" : "d",
+          "next": "d_0_1",
+          "line": "Uh… you okay?"
+        }
+      ]
+    },
+    "r_0_1": {
+      "choices": [
+        {
+          "nextType" : "d",
+          "next": "d_0_4",
+          "line": "Just, calm down. I’ll sort it."
+        }
+      ]
+    }
+  }
+}
